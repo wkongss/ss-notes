@@ -1,0 +1,11 @@
+# Created at 2026-01-14T11:06:10.063
+TestEngine with ID 'junit-jupiter' encountered 2 critical issues during test discovery:
+
+(1) [ERROR] @BeforeAll method 'public void com.example.AppTest.classSetup()' must be static unless the test class is annotated with @TestInstance(Lifecycle.PER_CLASS).
+    Source: MethodSource [className = 'com.example.AppTest', methodName = 'classSetup', methodParameterTypes = '']
+            at com.example.AppTest.classSetup(SourceFile:0)
+
+(2) [ERROR] @AfterAll method 'public void com.example.AppTest.classTeardown()' must be static unless the test class is annotated with @TestInstance(Lifecycle.PER_CLASS).
+    Source: MethodSource [className = 'com.example.AppTest', methodName = 'classTeardown', methodParameterTypes = '']
+            at com.example.AppTest.classTeardown(SourceFile:0)
+

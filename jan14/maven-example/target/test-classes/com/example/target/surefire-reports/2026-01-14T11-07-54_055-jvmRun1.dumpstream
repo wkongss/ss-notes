@@ -1,0 +1,7 @@
+# Created at 2026-01-14T11:07:55.135
+TestEngine with ID 'junit-jupiter' encountered a critical issue during test discovery:
+
+(1) [ERROR] @AfterAll method 'public void com.example.AppTest.classTeardown()' must be static unless the test class is annotated with @TestInstance(Lifecycle.PER_CLASS).
+    Source: MethodSource [className = 'com.example.AppTest', methodName = 'classTeardown', methodParameterTypes = '']
+            at com.example.AppTest.classTeardown(SourceFile:0)
+
