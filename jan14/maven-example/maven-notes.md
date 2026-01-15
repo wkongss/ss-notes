@@ -24,7 +24,7 @@
     6. Install
     > Copies the package into your local repository
     7. Deploy
-    > Pushes the package into a remote repository if specified
+    > Pushes the package into a remote repository
 
 
  - The project structure and configuration is controlled through a single file: [pom.xml](pom.xml) (Project Object Model). Uses the Extensible Markup Language (XML) to declare coordinates, dependancies, etc.
