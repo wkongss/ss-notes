@@ -60,10 +60,10 @@ db.collection_name.find({
 - There's plenty of other constraints, all of which are denoted with the special `$` character:
 	- `$gt`, `$lt`, `$gte`, `$lte`, `$neq`: $>, <, \geq, \leq, \neq$ respectively.
 	- `$in: [arr]` and `$nin: [arr]`: check if the value matches any value in the array.
-	- `$not`, `$and`, `$or`, `$nor`: implements the respective logic operators
+	- `$not`, `$and: [arr]`, `$or: [arr]`, `$nor`: implements the respective logic operators
     - Reference: https://www.mongodb.com/docs/manual/reference/mql/query-predicates/
 
-- To reference nested values like `{ k : { nested : v }` }, use dot notation with quotes: `"k.nested"`.
+- To reference nested values like `{ k : { nested : v } }`, use dot notation with quotes: `"k.nested"`.
 #### Updates and Deletions
 
 Of course, you can still use the same query predicates with updates and deletes.
