@@ -34,8 +34,7 @@ Generally, an HTML file will have the following structure:
     <!-- Title! This is what is shown in the browser tab. -->
     <title>Document</title>
 
-    <!-- We could also link in style sheets with CSS or scripts with JS using a <link> tag to make sure resources are
-     loaded in before we begin to render. -->
+    <!-- We could also link in style sheets with CSS or scripts with JS using a <link> tag to make sure resources are loaded in before we begin to render. -->
 </head>
 <body>
     Content of our page!
@@ -166,7 +165,7 @@ selector1, selector2, selector3 {
 }
 ```
 
-Combinators allow you to use multiple selectors in order to get more specific selections:
+**Combinators** allow you to use multiple selectors in order to get more specific selections:
 
  - `selector1 selector2 { ... }` is the descendant combinator. It will select all `selector2` elements that are nested within a `selector1` element.
  - `selector1 > selector2` is the child combinator. It will select all `selector2` elements that are direct children of a `selector1` element.
@@ -194,4 +193,29 @@ Flexbox is a display property that allows for the automatic arrangement and alig
 
 #### Animations
 
-Create animations
+Create animations by specifying keyframes with the `@keyframes` annotation:
+
+```CSS
+
+@keyframes animation-name {
+    /* Alias for 0% */
+    from {
+
+    }
+
+    /* Alias for 100%  */
+    to {
+
+    }
+
+    /* Alternatively, specify %s and what properties
+    or actions the element should have after X% time has
+    passed */
+
+    10% {
+        ...
+    }
+}
+```
+
+Afterwards, assign the animation to an element with the `animation-name` property and `animation-duration` to set the animation length. This is also consolidated into the `animation` property.
