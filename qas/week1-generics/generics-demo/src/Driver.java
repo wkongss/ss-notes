@@ -1,38 +1,38 @@
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
 public class Driver {
     public static void main(String[] args) throws Exception {
-        // TODO: Demonstrate non-generic deficiencies
-        NonGenericTuple objectTuple = new NonGenericTuple(1, 2);
-        int sum = objectTuple.getFirst() + objectTuple.getSecond();
+        // TODO: Demonstrate Code Reuse
+        Tuple<Boolean, Integer> boolIntTuple = new Tuple<>(false, 3);
+        Tuple<String, String> stringTuple = new Tuple<>("a", "B");
 
-        System.out.println(sum);
+        boolean bool = boolIntTuple.getFirst();
+        int num = boolIntTuple.getSecond();
+        String str = stringTuple.getFirst();
 
         // TODO: Demonstrate Type Checking
-        String s1 = "1", s2 = "2";
-        Tuple<Integer, Integer> wrongTuple = new Tuple<>(s1, s2);
-        String concat = wrongTuple.getFirst() + wrongTuple.getSecond();
+        Tuple<Integer, Integer> genericTuple = new Tuple<>(1, 1);
+        int genericSum = genericTuple.getFirst() + genericTuple.getSecond();
 
-        System.out.println(concat);
-
-        // TODO: Demonstrate Wildcards
-        ArrayList<Integer> intsList = new ArrayList<>();
-        
-        for (int i = 1; i <= 100; i++) {
-            intsList.add(i);
-        }
-
-        // Generics are non-covariant!
-        System.out.println(getIntSum(intsList));
-
+        System.out.println(genericSum);
     }
+    
+    // TODO: Demonstrate Wildcards
+    // ArrayList<Integer> intsList = new ArrayList<>();
+    
+    // for (int i = 1; i <= 10; i++) {
+    //     intsList.add(i);
+    // }
 
-    private static int getIntSum(ArrayList<Number> numList) {
-        int intSum = 0;
-        for (Number num : numList) {
-            intSum += num.intValue();
-        }
+    // Generics are non-covariant!
+    // System.out.println(getIntSum(intsList));
 
-        return intSum;
-    }
+    // private static int getIntSum(ArrayList<Number> numList) {
+        //     int intSum = 0;
+        //     for (Number num : numList) {
+    //         intSum += num.intValue();
+    //     }
+
+    //     return intSum;
+    // }
 }

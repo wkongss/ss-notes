@@ -27,9 +27,12 @@ public class Tuple<T, S> {
         return this.item2;
     }
 
-    // Type parameters in method definition
+    // Type parameters defined in method definition
     public static <U, V> Tuple<V, U> getReversedTuple(Tuple<U, V> tuple) {
-        return new Tuple<V, U>(tuple.getSecond(), tuple.getFirst());
+        V first = tuple.getSecond();
+        U second = tuple.getFirst();
+
+        return new Tuple<V, U>(first, second);
     }
 
     @Override
