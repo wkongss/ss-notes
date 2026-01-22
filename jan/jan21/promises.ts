@@ -12,7 +12,7 @@ const myPromise = fetch(FETCHURL)
 
 // Async function
 async function f() : Promise<void> {
-    const promise : Response = await fetch("https://naas.isalman.dev/no");
+    const promise : Response = await fetch(FETCHURL);
     const data : string = (await promise.json()).reason;
 
     console.log(data);
