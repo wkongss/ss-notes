@@ -113,6 +113,10 @@ Generally, an HTML file will have the following structure:
     - `<select> </select>` - A selection box that allows the user to select from one of many options.
         - `<option> </option>` - Defines an option that can be selected.
 
+By default, forms will submit a `GET` HTTP request. You can change this to `POST` by editing the `method` attribute of the form tag.
+
+Reference: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/form
+
 ### Inline vs. Block Elements
 
 Elements have a default rendering mode:
