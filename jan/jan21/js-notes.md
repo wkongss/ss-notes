@@ -73,6 +73,34 @@ const myInterval = setInterval(() => {
 }, 1_000);
 ```
 
+### Truthiness
+
+In JS, certain types are automatically converted to booleans during type coercion.
+
+The following are considered "Falsy":
+ - `0`, `-0`, and `0n`
+ - `false`
+ - `""`
+ - `null`
+ - `undefined`
+ - `NaN` and `Number.NaN`
+ - `document.all`
+
+Everything else is considered "Truthy". This can make a difference in control flow, for instance:
+
+```JS
+const f = 0;
+const t = 1;
+
+if (f) {
+    console.log("f is True");
+}
+
+if (t) {
+    console.log("t is True");
+}
+```
+
 ### ES6 Features
 
 The ECMAScript 2015 standard brought a ton of useful features into Javascript including:
@@ -194,7 +222,7 @@ function sum (a, b, ...rest) {
 }
 ```
 
-- The spread operator allows you to spread an array out into comma separated values. Can be used for making a deep copy of an array or as input for a function:
+- The spread operator allows you to spread an array or object out into comma separated values. Can be used for making a deep copy of an array or as input for a function:
 ```JS
 const arr = [1, 2, 3, 4, 5];
 
@@ -202,3 +230,112 @@ myFunc(0, ...arr, 6);
 
 const copy = [0, ...arr, 6];
 ```
+
+### The Event Loop
+
+JavaScript, unlike languages like Java, has little support for multithreading. In other words, tasks need to be scheduled in order to achieve asynchronous-like function (though since it's single-threaded, it isn't true concurrency).
+
+Think of this as a brain quickly swapping between multiple tasks instead of processing them in parallel.
+
+Within JS, there's an **event loop** which acts as a queue for which tasks are ran. Tasks are categorized into two types:
+
+ 1. Microtasks are asynchronous tasks given high priority. The most notable of these are **Promises**.
+ 2. Macrotasks are asynchronous tasks given low priority. These include FileIO, `setTimeout` and `setInterval`. This is why you can't rely on them for accurate time keeping.
+
+The event loop, then, determines the order in which these asynchronous tasks are run. In general, it looks like this:
+
+1. All synchronous call stack operations are performed.
+2. Every microtask from the microtask queue is run. Note that these may generate more microtasks to be put in the microtask queue for the next cycle.
+3. One macrotask from the macrotask queue is run.
+4. Repeat steps 2-3 until program terminates.
+
+### Promises
+
+Promises are JS' way of handling asynchronous calls. They are sort of an asynchronous contract to perform a task that will perform a callback once fulfilled.
+
+Promises are returned by functions declared with the `async` keyword:
+
+```JS
+// Asynchronous function f returns a Promise { boolean }
+async function f() {
+    return true;
+}
+```
+
+Promises go through a lifecycle of of:
+1. Pending - still waiting on the result.
+2. Fulfilled/Rejected - finished. If fulfilled, contains a result. If rejected, then errored.
+
+To wrangle with the lifecycle, you can use callbacks `then`, `catch`, and `finally`.
+
+```JS
+async function f() => {
+    return true;
+};
+
+const myPromise = f();
+
+myPromise
+    .then((res) => {
+        // callback with a thennable result as the parameter
+
+        doStuff(res);
+    })
+    .catch((err) => {
+        // callback with the error as a parameter
+
+        doStuff(err);
+    })
+    .finally(() => {
+        // callback that executes after either then or catch
+    });
+
+// You can also explicitly define a promise:
+
+function g() {
+    // The constructor takes in a function with two parameters.
+    // res is a function to be called with the thennable output if the function is resolved.
+    // rej is a function to be called with the error if the function is rejected.
+    return new Promise((res, rej) => {
+        if (today === "Monday") {
+            rej("I hate Mondays");
+            return;
+        }
+
+        res("It's not Monday!");
+    })
+}
+
+```
+
+Prior to promises, you had issues with extremely nested callbacks where you would want to schedule more tasks after a certain task completed. This made code extremely difficult to reason with - "callback hell, pyramid of doom".
+
+This can now be done with promise chaining due to callbacks also returning promises!
+
+```JS
+myPromise
+    .then((res1) => { ... })
+    .then((res2) => { ... })
+    .then((res3) => { ... });
+```
+
+Instead of chaining, you may also opt for the `async` and `await` structure. Within an `async` block, you can block code execution until a promise is resolved/rejected by using the `await` keyword:
+
+```JS
+async function f() {
+    const res = await fetch("https://google.com");
+    console.log("Fetch completed!");
+
+    const data = await res.json();
+    console.log("Json completed!");
+    // If any exceptions occur, the promise is rejected
+
+    // Otherwise, returns the result as a promise (can be void, so Promise<void>)
+    // Wraps data in a promise: Promise<DataType>
+    return data;
+}
+```
+
+
+
+Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
