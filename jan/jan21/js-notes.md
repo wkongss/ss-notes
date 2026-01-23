@@ -48,6 +48,7 @@ A good example of these are arrays. Note that JS arrays are more like Python lis
  - `arr.filter()` takes in a function with values `(element, index, arrRef) => { ... }` and returns a new array with only elements from `arr` that return a truthy value when passed into the function.
  - `arr.reduce()` takes in a function with values `(accumulator, element) => { ... }` and returns the accumulator after looping through the array. The accumulator is set to the return value of the function after each element is processed.
     - There is also `reduceRight` if you wish to reduce from right to left.
+    - You may also pass in an initial value for the accumulator as a second argument for the `reduce function`
 
 - `arr.some()` and `arr.every()` take in a function with values `element, index, arrRef => { ... }` and returns a boolean value. `some` returns `true` iff at least one element returns a truthy value; `every` returns `true` iff all elements return a truthy value.
 - Add elements with `push` and remove the last element with `pop`.
