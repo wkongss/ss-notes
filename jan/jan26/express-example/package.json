@@ -1,0 +1,16 @@
+{
+  "name": "express-example",
+  "version": "1.0.0",
+  "description": "Showcasing Express.js",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
