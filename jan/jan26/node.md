@@ -19,7 +19,7 @@ Create a node project with `npm init`. This will generate a `package.json` file 
 Similar to the Maven Repository, [npmjs](https://www.npmjs.com/) hosts remote packages that can be downloaded and used for your own project.
 
 To do so, use `npm i` to populate your dependencies with everything in your `package.json` file. To add a new dependency, use `npm i package-name` to install it.
- - To install a dependency globally, use `npm i -g`
+ - To install a dependency globally, use `npm i -g`. For example, we may want to add the package `nodemon` to all of our repositories to restart a server whenever a `.js` file changes.
  - To uninstall a dependcy, use `npm un package-name`.
 
 To run a script, use `npm run script-name`.
