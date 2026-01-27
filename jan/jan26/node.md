@@ -36,6 +36,8 @@ const express = require("express");
 const { Button } = require("react-bootstrap");
 ```
 
+#### Local Packages
+
 You can also define your own exports in another file to be imported later. For ES6, simply use the `export` keyword:
 
 ```JS
@@ -59,47 +61,3 @@ module.exports = {
 Lastly, import the module from the file `path`.
 
 To run a JS file, use `node file-name`.
-
-## Express
-
-Express is a widely-used packaged for setting up a back-end server and includes features such as a dedicated middleware ecosystem, endpoint handling, and configurable listening.
-
-To install it into your project, use:
-
-```bash
-npm i express
-```
-
-Afterwards, import it and create an express app and listen on a port:
-
-```JS
-import express from "express";
-
-const app = express();
-const port = 8080;
-
-app.listen(port, () => {
-    // setup function
-});
-```
-
-### Handling HTTTP Requests
-
-To create endpoints for Express, use your `app` object and then specify an endpoint with the HTTP method (i.e. `GET`) with the following function:
-
-```JS
-app.get("endpoint", (req, res) => {
-    // Callback
-});
-```
-
-You may also opt for `post`, `put`, `delete` methods.
- - The `endpoint` is the relative URL to respond to. Example: `/` responds to `https://mysite.com/` and `/aboutMe` would respond to `https://mysite.com/aboutMe`.
- - You then pass in a callback function that takes in the Request Object `req` and the pending Response object `res`.
-
-Do whatever processing you need to do in the callback function and then send back a response:
-```JS
-app.get("/eightBall", (req, res) => {
-    res.send("Answer unclear - ask again later.");
-});
-```
