@@ -25,7 +25,7 @@ function App() {
       "flexDirection": "row",
       "justifyContent": "flex-start",
       "alignItems": "flex-start",
-      "flexWrap": "nowrap,",
+      "flexWrap": "nowrap",
       "height": "550px"
     };
   })
@@ -36,7 +36,7 @@ function App() {
     flex-direction: ${flexStyle["flexDirection"]};
     justify-content: ${flexStyle["justifyContent"]};
     align-items: ${flexStyle["alignItems"]};
-    flex-wrap: ${flexStyle["flexWrap"]}\n}`;
+    flex-wrap: ${flexStyle["flexWrap"]};\n}`;
 
   function updateStyle(prop, value) {
     setFlexStyle((prev) => {
