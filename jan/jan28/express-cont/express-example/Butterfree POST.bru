@@ -1,0 +1,26 @@
+meta {
+  name: Butterfree POST
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/pokemon/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    name: "butterfree",
+    ownerId: 2,
+    level: 30,
+    moves: ["whirlwind", "u-turn", "sleep powder", "rage powder"],
+    types: ["bug", "flying"]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
