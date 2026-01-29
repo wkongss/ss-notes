@@ -1,0 +1,40 @@
+{
+    "trainers": [
+        {
+            "id": 1,
+            "name": "red",
+            "badges": 5,
+            "location": "route 80"
+        },
+        {
+            "id": 2,
+            "name": "blue",
+            "badges": 8,
+            "location": "victory road"
+        }
+    ],
+
+    "pokemon": [
+        {
+            "name": "pikachu",
+            "ownerId": 1,
+            "level": 40,
+            "types": ["lightning"],
+            "moves": ["thunderbolt", "quick attack"]
+        },
+        {
+            "name": "charmander",
+            "ownerId": 1,
+            "level": 20,
+            "types": ["fire"],
+            "moves": ["flamethrower", "headbutt"]
+        },
+        {
+            "name": "blastoise",
+            "ownerId": 2,
+            "level": 60,
+            "types": ["water"],
+            "moves": ["hydro pump", "rain dance", "hyper beam"]
+        }
+    ]
+}
