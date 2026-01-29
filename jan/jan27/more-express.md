@@ -88,7 +88,7 @@ const key = process.env.API_KEY;
 
 ### CORS
 
-Cross-Origin-Resource-Sharing is a way for servers to restrict which clients are able to access its resources by restricting the origin (i.e. you only allow requests from your designated frontned site `https://foo.com`). This is done with the `Access-Control-Allow-Origin` header.
+Cross-Origin-Resource-Sharing is a way for servers to restrict which browser clients are able to access its resources by restricting the origin (i.e. you only allow requests from your designated frontned site `https://foo.com`). This is done with the `Access-Control-Allow-Origin` header.
 
 By default, Express doesn't include the header, so it only allows same-origin sharing. To allow for cross-origin sharing, use the `cors` middleware. Install it using `npm`:
 
@@ -114,3 +114,6 @@ app.use(cors({
     origin: "http://127.0.0.1:5500"
 }));
 ```
+
+Note that CORS is usually implemented at a browser level and within APIs such as `fetch` and `XHR` and not at the server level. Postman, `curl`, and other tools bypass CORS despite not having a matching `Origin` header.
+ - This is primarily because browsers are distrustful of content - they want confirmation that the resources come from a verifiable source.
