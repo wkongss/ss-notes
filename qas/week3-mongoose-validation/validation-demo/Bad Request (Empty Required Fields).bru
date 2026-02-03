@@ -1,0 +1,25 @@
+meta {
+  name: Bad Request (Empty Required Fields)
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:8080/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "moveset": [
+      "Tailwind",
+      "Sleep Powder"
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

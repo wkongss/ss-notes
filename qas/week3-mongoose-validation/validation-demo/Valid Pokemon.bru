@@ -1,0 +1,27 @@
+meta {
+  name: Valid Pokemon
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "trainerName": "Red",
+    "species": "Pikachu",
+    "level": 25,
+    "moveset": [
+      "Thunderbolt"
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

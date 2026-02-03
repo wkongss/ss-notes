@@ -1,0 +1,26 @@
+meta {
+  name: Bad Request (Level)
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:8080/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "species": "Pikachu",
+    "level": 125,
+    "moveset": [
+      "Thunderbolt"
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
