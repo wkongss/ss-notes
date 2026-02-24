@@ -2,3 +2,11 @@
 .obsidian
 .env
 node_modules
+
+# C# binaries
+
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+[Bb]in/

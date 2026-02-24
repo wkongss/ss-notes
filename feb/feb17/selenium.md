@@ -94,7 +94,7 @@ Lastly, we're able to interact with our elements using five different actions:
  1. `click()` - Clicks the center of the element if available. Can throw an exception if it's obscured.
  2. `sendKeys(string)` - Sends keyboard inputs (i.e. types out a string) to a `text` or `content-editable` field. Can throw an exception otherwise. 
  3. `clear()` - Resets the element back to its original state such as a form input. Throws an exception if the element isn't editable/resettable.
- 4. `select` - Only for form select objects (create using `new Select(selectElement)`). Many different variants such as `selectByIndex`, `selectByVisibleText`, and `SelectByValue`.
+ 4. `select()` - Only for form select objects (create using `new Select(selectElement)`). Many different variants such as `selectByIndex`, `selectByVisibleText`, and `SelectByValue`.
  5. `submit()` - Can be called on any form element to submit the form. Not advisable for Selenium versions 4+ in favor of clicking the submit button of the form.
 
 For our button, we could do something like:
