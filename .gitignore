@@ -3,6 +3,10 @@
 .env
 node_modules
 
+# Maven Builds
+
+[Tt]arget/
+
 # C# binaries
 
 [Oo]bj/
