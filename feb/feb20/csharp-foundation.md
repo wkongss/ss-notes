@@ -5,7 +5,7 @@ C# is a language part of the **.NET Core** cross-platform ecosystem (including F
 **.NET Framework** is a legacy implementation for Windows operating systems.
 **.NET Standard** is a bridge between Framework and Core.
 
-C# is compiled, so to compile your program, use `dotnet build`. To compile and run your program
+C# is compiled, so to compile your program, use `dotnet build`.
 
 ### Variable Declaration
 

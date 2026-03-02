@@ -34,7 +34,7 @@ public class Tests
 
 Additional attributes can be found here: https://docs.nunit.org/articles/nunit/writing-tests/attributes.html
 
-You can mark setup and teardown methods with the `[OneTimeSetup]`, `[SetUp]`, `[TearDown], and `[OneTimeTearDown]` attributes.
+You can mark setup and teardown methods with the `[OneTimeSetup]`, `[SetUp]`, `[TearDown]`, and `[OneTimeTearDown]` attributes.
 These OneTimeSetup runs once at the beginning of the suite, Setup runs before every test, Teardown runs after every test, and OneTimeTeardown runs after the entire suite has concluded:
 
 ```C#
