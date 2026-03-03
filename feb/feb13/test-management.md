@@ -51,6 +51,7 @@ Experts independently estimate resource allocation. Then, if there are any outli
 Experts form three distinct estimations: an optimistic case (best-case) called *a*, a likely case (average-case) called *m*, and a pessimistic case (worst-case) called *b*. The estimation is then formed based on a weighted arithmetic mean.
 
 A common weighting is:
+
 $$
 E = \frac{a + 4m + b}{6}
 $$

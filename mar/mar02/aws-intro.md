@@ -8,10 +8,10 @@ In a long, long time ago in a galaxy far far away, Amazon had to engineer a solu
 
 **Fully cloud-based** - Everything is migrated into cloud services from the design and deployment phases.
 
-**On premisis** - Environment and resource management is hosted in compute units on-location.
- - Particularly used if upfront costs aren't a prohibiter or if you have certain contextual needs such as sensitive information that shouldn't be uploaded to a third-party service or simply have incompatable technologies.
+**On premises** - Environment and resource management is hosted in compute units on-location.
+ - Particularly used if upfront costs aren't a prohibiting factor or if you have certain contextual needs such as sensitive information that shouldn't be uploaded to a third-party service or simply have incompatible technologies.
 
-**Hybrid deployment** - Use the cloud for certain aspects of infrastructure while maintaining other aspects on premisis.
+**Hybrid deployment** - Use the cloud for certain aspects of infrastructure while maintaining other aspects on premises.
  - Can also be simply that certain parts of the pipeline haven't been migrated or are unable to migrate.
 
 When the AWS portions of your service, everything is done through the AWS Management console. Here, you can create, manage, and deploy various services.
@@ -43,6 +43,6 @@ There are 6 different broad categories of services AWS offers:
 1. **Compute** - Deals with running programs on hardware in the cloud. Example: Elastic Compute Cloud (EC2)
 2. **Networking and Content Distribution** - Deals with networking within the cloud as well as delivering content to end-users Example: Cloudfront (CDN) or Virtual Private Cloud (VPC)
 3. **Storage** - Deals with storing and warehousing data. Example: Simple Storage Service (S3)
-4. **Database** - Deails with querying, creating, updating, and deleting data. Example: Relational Database Service (RDS)
+4. **Database** - Deals with querying, creating, updating, and deleting data. Example: Relational Database Service (RDS)
 5. **Security, Identity, Compliance** - Deals with authentication, permissions, user groups. Example: Identity and Access Management (IAM)
 6. **Management** - Handles accounts and offers collective management of organization structure for billing and rulesets. Example: AWS Orgs

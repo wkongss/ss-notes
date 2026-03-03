@@ -25,7 +25,7 @@ The emphasis and which and what objectives are necessary is highly contextual ba
 
 These are two separate activities: testing involves triggering a failure (dynamic) or finding defects directly (static).
 
-Then, **debugging** involves reproducing the feailure, diagonising the defect, and then fixing the defect for dynamic failures. For static failures, it is simply fixing the issue.
+Then, **debugging** involves reproducing the failure, diagnosing the defect, and then fixing the defect for dynamic failures. For static failures, it is simply fixing the issue.
 
 After debugging is complete, the patched product is then handed off to do additional testing to check if the problem was resolved.
  - This may also include **regression testing** to check if the fix broke other features.
@@ -84,13 +84,13 @@ Root causes of a failure are the underlying defect(s) that are the source of the
 
 ### Testing Activities and Testware
 
-While testing is highly context-dependent, there are still general procedures in how it is best practiced. The order and implmentation of these activities may vary based on SLDC (i.e. some may be more parallel with each other):
+While testing is highly context-dependent, there are still general procedures in how it is best practiced. The order and implementation of these activities may vary based on SLDC (i.e. some may be more parallel with each other):
 
 1. Planning - review and define objectives for testing and then choose approaches (technologies, testing objects) to handle these.
 
-2. Monitoring and Control - Continously check the test activities and the fulfillment of the objectives laid out in the plan.
+2. Monitoring and Control - Continuously check the test activities and the fulfillment of the objectives laid out in the plan.
 
-3. Analysis - Identify the testable features available and their testibility as well as the associated objectives with them. You may prioritize testing objects at this stage. The "What to test" question.
+3. Analysis - Identify the testable features available and their testability as well as the associated objectives with them. You may prioritize testing objects at this stage. The "What to test" question.
 
 4. Design - After analysis, consider the test conditions and necessary **testware** or tooling necessary to to meet these conditions. Consider the techniques and testing environment. The "How to test" question.
 
@@ -98,7 +98,7 @@ While testing is highly context-dependent, there are still general procedures in
 
 6. Execution - Run the tests implemented in the last step. Compare the test results with expected results and log the results. Preliminary root cause analysis may be performed or otherwise deferred to development team.
 
-7. Completion - Resolve the anomolies or if any defects are unresolved, add to a todo list for the appropriate team. Generate a report in regards to the scope of activities and improvements made.
+7. Completion - Resolve the anomalies or if any defects are unresolved, add to a todo list for the appropriate team. Generate a report in regards to the scope of activities and improvements made.
 
 This process is inclusive of many factors, not just those involved with testing:
 
