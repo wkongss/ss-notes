@@ -39,13 +39,13 @@ Object Storage stores data as a three-value combination:
 
 Amazon offers seven different tiers for how you store your data with different cost per GB and access time costs/guarantees at each tier.
 
-<ins>Fast Access</ins**>
+<ins>Fast Access</ins>
 
 1. **S3 Standard** - Cheapest access (usually free) but most costly per GB of data. Data is replicated in 3+ AZs.
 2. **S3 Standard IA** - Cheaper cost per GB than Standard, but higher cost for reads.
 3. **S3 One Zone IA** - Cheaper storage price than Standard IA, but only replicated in one AZ.
 --- 
-<ins>Archival</ins**>
+<ins>Archival</ins>
 
 4. **S3 Glacier Instant Retrieval** -  Cheap storage, but costly retrievals. Guaranteed retrieval within milliseconds.
 5. **S3 Glacier Flexible Retrieval** -  Cheaper storage, but costlier retrievals. Guaranteed retrieval within minutes (expedited) to hours (bulk).
@@ -54,7 +54,7 @@ Amazon offers seven different tiers for how you store your data with different c
 Note that Glacier tiers require a specific API to access.
 
 --- 
-<ins>Intelligent Tiering</ins**>
+<ins>Intelligent Tiering</ins>
 
 7. **S3 Intelligent Tiering** - Starts with S3 standard and intelligently moves data to more archival tiers as they don't get accessed for longer.
 	 - Can redefine patterns with a lifecycle policy for more fine-tuned control.
